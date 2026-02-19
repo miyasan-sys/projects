@@ -17,7 +17,7 @@ def duration(source, limit): # the duration
             ftime = datetime.datetime.fromtimestamp(screenshots.stat().st_mtime)
             
             if ftime < timer:
-                screenshots.unlink
+                screenshots.unlink()
                 print("Deleted: " + screenshots.name)
                 count += 1
         else:
@@ -25,5 +25,5 @@ def duration(source, limit): # the duration
             
     return count
 
-duration("/home/miyasan/Pictures/Screenshots", 10)
+duration("/home/miyasan/Pictures/Screenshots", 30)
         
